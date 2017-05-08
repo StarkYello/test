@@ -57,7 +57,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    private void test(){
-        Log.d("testing","test");
-    }
+    
 }
