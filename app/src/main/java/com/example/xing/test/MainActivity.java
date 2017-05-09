@@ -10,29 +10,44 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 //import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity {
+public Button start;
+    public void startbutton(){
+        start=(Button)findViewById(R.id.button3);
+        start.setOnClickListener(new View.OnClickListener(){
+            public void onClick (View v){
+                Intent starti=new Intent(MainActivity.this, ExperimentActivity.class);
+                startActivity(starti);
+            }
+        });
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        startbutton();
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
 
-            }
-        });
+//            }
+//        });
 //        Gson gson=new Gson();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
