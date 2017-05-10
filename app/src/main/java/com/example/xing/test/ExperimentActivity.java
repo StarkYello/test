@@ -23,7 +23,7 @@ public class ExperimentActivity extends AppCompatActivity {
         final ImageView btn = (ImageView) findViewById(R.id.imageView3);
         btn.startAnimation(animation);
         btn.setOnClickListener(new View.OnClickListener() {
-            @Override
+//            @Override
             public void onClick(final View view) {
                 view.clearAnimation();
             }
